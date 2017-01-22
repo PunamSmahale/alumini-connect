@@ -1,4 +1,8 @@
 <h1>
   {{title}}
 </h1>
-<h2>{{alumini.name}}</h2>
+<h2>{{alumini.name}} details!!</h2>
+<div><label>Id: </label>{{alumini.id}}</div>
+<div><label>Name: </label>
+<input [(ngModel)]="alumini.name" placeholder="name">
+</div>
