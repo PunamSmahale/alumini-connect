@@ -5,15 +5,7 @@ export class myAlumini {
   name : string;
 }
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  title = 'Join Alumini !';
-
- aluminus : myAlumini[] = [
+const ALUMINUS : myAlumini[] = [
   { id : 1, name : 'Popular English'},
   { id : 2, name : 'Shishukung'},
   { id : 3, name : 'M&N English'},
@@ -26,7 +18,15 @@ export class AppComponent {
   { id : 10, name : 'L&T MyT BI'}
   ];
 
-  selectedAlumini : myAlumini;
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+ title = 'Join Alumini !';
+ aluminus = ALUMINUS;
+ selectedAlumini : myAlumini;
 
   onSelect(alumini : myAlumini){
     this.selectedAlumini = alumini;
