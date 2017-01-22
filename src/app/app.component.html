@@ -7,10 +7,6 @@
   </li>
 </ul>
 
-<div *ngIf="selectedAlumini">
-    <h2>{{selectedAlumini.name}} details!!</h2>
-    <div><label>Id: </label>{{selectedAlumini.id}}</div>
-    <div><label>Name: </label>
-        <input [(ngModel)]="selectedAlumini.name" placeholder="name">
-    </div>
+<div>
+  <my-alumini-detail [alumini] = "selectedAlumini"></my-alumini-detail>
 </div>

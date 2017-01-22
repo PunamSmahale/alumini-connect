@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 
-export class myAlumini {
-  id : number;
-  name : string;
-}
+import { AluminiDetailComponent } from './alumini-detail/alumini-detail.component';
 
-const ALUMINUS : myAlumini[] = [
+import { MyAlumini } from './my-alumini';
+
+// export class myAlumini {
+//   id : number;
+//   name : string;
+// }
+
+const ALUMINUS : MyAlumini[] = [
   { id : 1, name : 'Popular English'},
   { id : 2, name : 'Shishukung'},
   { id : 3, name : 'M&N English'},
@@ -26,9 +30,9 @@ const ALUMINUS : myAlumini[] = [
 export class AppComponent {
  title = 'Join Alumini !';
  aluminus = ALUMINUS;
- selectedAlumini : myAlumini;
+ selectedAlumini : MyAlumini;
 
-  onSelect(alumini : myAlumini){
+  onSelect(alumini : MyAlumini){
     this.selectedAlumini = alumini;
   }
 }
