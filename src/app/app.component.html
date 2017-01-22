@@ -1,8 +1,16 @@
 <h1>
   {{title}}
 </h1>
-<h2>{{alumini.name}} details!!</h2>
-<div><label>Id: </label>{{alumini.id}}</div>
-<div><label>Name: </label>
-<input [(ngModel)]="alumini.name" placeholder="name">
+<ul class="alumini">
+  <li *ngFor = "let alumini of aluminus" (click) = "onSelect(alumini)" [class.selected]="alumini === selectedAlumini">
+    <span class="badge">{{alumini.id}}</span> {{alumini.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedAlumini">
+    <h2>{{selectedAlumini.name}} details!!</h2>
+    <div><label>Id: </label>{{selectedAlumini.id}}</div>
+    <div><label>Name: </label>
+        <input [(ngModel)]="selectedAlumini.name" placeholder="name">
+    </div>
 </div>
