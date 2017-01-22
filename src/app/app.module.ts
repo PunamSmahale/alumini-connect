@@ -5,18 +5,21 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AluminiDetailComponent } from './alumini-detail/alumini-detail.component';
+import { AluminiComponent } from './alumini/alumini.component';
+import { AluminiService } from './services/alumini.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AluminiDetailComponent
+    AluminiDetailComponent,
+    AluminiComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AluminiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

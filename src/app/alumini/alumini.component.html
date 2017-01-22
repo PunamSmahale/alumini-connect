@@ -1,0 +1,9 @@
+<ul class="alumini">
+  <li *ngFor = "let alumini of aluminus" (click) = "onSelect(alumini)" [class.selected]="alumini === selectedAlumini">
+    <span class="badge">{{alumini.id}}</span> {{alumini.name}}
+  </li>
+</ul>
+
+<div>
+  <my-alumini-detail [alumini] = "selectedAlumini"></my-alumini-detail>
+</div>
