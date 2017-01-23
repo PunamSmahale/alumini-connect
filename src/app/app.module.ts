@@ -4,11 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './services/in-memory-data.service';
+
 import { AppComponent } from './app.component';
 import { AluminiDetailComponent } from './alumini-detail/alumini-detail.component';
 import { AluminiComponent } from './alumini/alumini.component';
 import { AluminiService } from './services/alumini.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -20,7 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    FormsModule,    
     HttpModule,
     AppRoutingModule
   ],
