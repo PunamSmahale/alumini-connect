@@ -12,6 +12,10 @@ export class AluminiService {
       return Promise.resolve(ALUMINUS);
   }
 
+  getAluminus(id : number) : Promise<MyAlumini>{
+    return this.getAlumini().then(alumini => alumini.find(aluminus => aluminus.id === id));
+  }
+  
   getAluminiSlowly() : Promise<MyAlumini[]>{
     //returns data after a delay of 2 seconds
     return new Promise(resolve =>

@@ -2,22 +2,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AluminiDetailComponent } from './alumini-detail/alumini-detail.component';
 import { AluminiComponent } from './alumini/alumini.component';
 import { AluminiService } from './services/alumini.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AluminiDetailComponent,
-    AluminiComponent
+    AluminiComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [AluminiService],
   bootstrap: [AppComponent]
