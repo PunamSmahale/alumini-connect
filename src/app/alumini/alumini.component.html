@@ -4,6 +4,9 @@
   </li>
 </ul>
 
-<div>
-  <my-alumini-detail [alumini] = "selectedAlumini"></my-alumini-detail>
+<div *ngIf="selectedAlumini">
+  <h2>
+      {{selectedAlumini.name | uppercase }} is my alumini
+  </h2>
+  <button (click)="goToDetail()">View Details</button>
 </div>
