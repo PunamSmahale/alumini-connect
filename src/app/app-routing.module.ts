@@ -5,12 +5,14 @@ import { AluminiDetailComponent } from './alumini-detail/alumini-detail.componen
 import { AluminiComponent } from './alumini/alumini.component';
 import { AluminiService } from './services/alumini.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AluminiListComponent } from './alumini-list/alumini-list.component';
 
 const routes : Routes = [
   {path : '', redirectTo : '/dashboard', pathMatch : 'full'},
   {path : 'alumini', component : AluminiComponent},
   {path : 'dashboard', component : DashboardComponent},
-  {path : 'alumini/:id', component : AluminiDetailComponent}
+  {path : 'alumini/:id', component : AluminiListComponent},
+  {path : 'list/:id', component : AluminiListComponent}
 ];
 
 @NgModule({

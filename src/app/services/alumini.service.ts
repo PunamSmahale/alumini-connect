@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { MyAlumini } from '../my-alumini';
+import { Alumini } from '../alumini';
 import { ALUMINUS } from '../mock-data/mock-alumini';
 
 @Injectable()
@@ -21,4 +22,9 @@ export class AluminiService {
     return new Promise(resolve =>
     setTimeout(() => resolve(this.getAlumini()), 2000));
   }
+
+  getAluminiList(myAluminiId : number): Promise<Alumini[]> {
+     return this.getAlumini().then(alumini => alumini.find(aluminus => aluminus.id === myAluminiId).aluminiList);
+  }
+  
 }

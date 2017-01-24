@@ -12,6 +12,7 @@ import { AluminiDetailComponent } from './alumini-detail/alumini-detail.componen
 import { AluminiComponent } from './alumini/alumini.component';
 import { AluminiService } from './services/alumini.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AluminiListComponent } from './alumini-list/alumini-list.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     AluminiDetailComponent,
     AluminiComponent,
-    DashboardComponent
+    DashboardComponent,
+    AluminiListComponent
   ],
   imports: [
     BrowserModule,

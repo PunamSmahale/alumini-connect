@@ -1,18 +1,13 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 export class InMemoryDataService  implements InMemoryDbService{
-createDB(){
-  let alumini = [
-      { id : 1, name : 'Popular English'},
+createDb(){
+    let alumini = [
+      { id : 1, name : 'Popular English', aluminiList:[{id: 1, name: "Sonia"}, {id: 2 , name: "Manu"}]},
       { id : 2, name : 'Shishukung'},
       { id : 3, name : 'M&N English'},
       { id : 4, name : 'Parvatibhai College'},
-      { id : 5, name : 'PCCE'},
-      { id : 6, name : 'L&T SET Training'},
-      { id : 7, name : 'L&T Travelers BI'},
-      { id : 8, name : 'L&T Mercer'},
-      { id : 9, name : 'L&T Travelers PI'},
-      { id : 10, name : 'L&T EBusiness'}
+      { id : 5, name : 'PCCE', aluminiList:[{id: 1, name: "Deepti"}, {id: 2 , name: "Manjali"}, {id: 2 , name: "Seema"}]}
   ];
 
   return {alumini};

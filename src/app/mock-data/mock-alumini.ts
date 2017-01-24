@@ -1,14 +1,14 @@
 import { MyAlumini } from '../my-alumini';
+import { Alumini } from '../alumini';
+
+const alumini1 : Alumini[] = [{id : 1, name: "Pooja"}, {id : 2, name: "Priya"}];
+
+const myAlumini1 : MyAlumini = {id : 1, name : "tester", aluminiList : alumini1};
 
 export const ALUMINUS : MyAlumini[] = [
-  { id : 1, name : 'Popular English'},
-  { id : 2, name : 'Shishukung'},
-  { id : 3, name : 'M&N English'},
-  { id : 4, name : 'Parvatibhai College'},
-  { id : 5, name : 'PCCE'},
-  { id : 6, name : 'L&T SET Training'},
-  { id : 7, name : 'L&T Travelers BI'},
-  { id : 8, name : 'L&T Mercer'},
-  { id : 9, name : 'L&T Travelers PI'},
-  { id : 10, name : 'L&T EBusiness'}
-  ];
+      new MyAlumini, { id : 1, name: "PCCE 1", aluminiList: alumini1 },
+      new MyAlumini, { id : 2, name: "PCCE 2", aluminiList: alumini1 },
+      new MyAlumini, { id : 3, name: "PCCE 3", aluminiList: alumini1 },
+      new MyAlumini, { id : 4, name: "PCCE 4", aluminiList: alumini1 },
+      new MyAlumini, { id : 5, name: "PCCE 5", aluminiList: alumini1 }
+];
