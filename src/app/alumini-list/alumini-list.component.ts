@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+
+import 'rxjs/add/operator/switchMap'
 
 import { AluminiService } from '../services/alumini.service';
 import { MyAlumini } from '../my-alumini';
@@ -13,10 +16,13 @@ export class AluminiListComponent implements OnInit {
 
   aluminiList : Alumini[] = [];
   aluminiData : MyAlumini[] = [];
-  constructor(private aluminiService : AluminiService ) { }
+  constructor(private aluminiService : AluminiService,
+              private route : ActivatedRoute ) { }
 
   ngOnInit() {
-    this.aluminiService.getAluminiList(+"5").then(list => this.aluminiList = list);
+    this.route.params
+    .switchMap((params : Params) => this.aluminiService.getAluminiList(+params["id"]))
+    .subscribe(list => this.aluminiList = list);
   }
 
 }

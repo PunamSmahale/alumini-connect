@@ -17,7 +17,9 @@ export class DashboardComponent implements OnInit {
   constructor(private aluminiService : AluminiService) { }
 
   ngOnInit() {
-    this.aluminiService.getAlumini().then(serviceAlumini => this.alumini = serviceAlumini.slice(1,5));
+//    this.aluminiService.getAlumini().then(serviceAlumini => this.alumini = serviceAlumini.slice(0,2));
+    this.aluminiService.getAlumini().then(serviceAlumini => this.alumini = serviceAlumini);
+    
   }
 
 }
