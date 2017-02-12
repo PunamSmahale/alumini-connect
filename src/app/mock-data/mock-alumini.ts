@@ -10,7 +10,7 @@ const myAlumini2 : MyAlumini = {id : 2, name : "M&N School", aluminiList : alumi
 const myAlumini3 : MyAlumini = {id : 3, name : "L&T", aluminiList : alumini3};
 
 export const ALUMINUS : MyAlumini[] = [
-     myAlumini1,
+      myAlumini1,
       myAlumini2,
       myAlumini3
 ];

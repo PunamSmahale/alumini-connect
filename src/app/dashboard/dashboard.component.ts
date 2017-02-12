@@ -5,7 +5,7 @@ import { AluminiService } from '../services/alumini.service';
 
 
 @Component({
-  moduleId: module.id,
+  // moduleId: module.id,
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']

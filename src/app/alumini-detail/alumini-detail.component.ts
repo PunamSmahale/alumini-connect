@@ -8,7 +8,7 @@ import { MyAlumini } from '../my-alumini';
 import { AluminiService} from '../services/alumini.service';
 
 @Component({
-  moduleId : module.id,
+  // moduleId : module.id,
   selector: 'my-alumini-detail',
   templateUrl: './alumini-detail.component.html',
   styleUrls: ['./alumini-detail.component.css']
